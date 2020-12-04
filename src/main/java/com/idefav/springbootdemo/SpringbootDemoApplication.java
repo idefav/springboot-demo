@@ -3,6 +3,7 @@ package com.idefav.springbootdemo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.socket.WebSocketSession;
@@ -30,10 +31,10 @@ public class SpringbootDemoApplication {
      *
      * @return the string
      */
-    @GetMapping("/hello")
-    public String hello(){
+    @GetMapping("/hello/{name}")
+    public String hello(@PathVariable String name) {
         WebSocketSession webSocketSession;
 
-        return String.format("hhh,%s","test");
+        return String.format("hhh,%s", "test");
     }
 }
