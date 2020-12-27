@@ -1,7 +1,13 @@
 package com.idefav.springbootdemo;
 
+import io.jaegertracing.Configuration;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.opentracing.Tracer;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.autoconfigure.metrics.MeterRegistryCustomizer;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,5 +42,10 @@ public class SpringbootDemoApplication {
         WebSocketSession webSocketSession;
 
         return String.format("hhh,%s", "test");
+    }
+
+    @Bean
+    MeterRegistryCustomizer<MeterRegistry> configurer(@Value("${spring.application.name}") String applicationName){
+        return registry -> registry.config().commonTags("application", applicationName);
     }
 }
