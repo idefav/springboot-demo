@@ -92,11 +92,11 @@
                     </image>
                     <docker>
                         <publishRegistry>
-                            <username>wzs2009_hi@126.com</username>
-                            <password>aV6F91K@D8fg</password>
+                            <username>***@126.com</username>
+                            <password>***</password>
                             <url>https://cr.console.aliyun.com/repository/cn-shanghai/idefav/springboot-demo/details
                             </url>
-                            <email>wzs2009_hi@126.com</email>
+                            <email>***@126.com</email>
                         </publishRegistry>
                     </docker>
                 </configuration>
