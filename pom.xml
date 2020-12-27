@@ -92,11 +92,7 @@
                     </image>
                     <docker>
                         <publishRegistry>
-                            <username>***@126.com</username>
-                            <password>***</password>
-                            <url>https://cr.console.aliyun.com/repository/cn-shanghai/idefav/springboot-demo/details
-                            </url>
-                            <email>***@126.com</email>
+                            <url>https://cr.console.aliyun.com/repository/cn-shanghai/idefav/springboot-demo/details</url>
                         </publishRegistry>
                     </docker>
                 </configuration>
