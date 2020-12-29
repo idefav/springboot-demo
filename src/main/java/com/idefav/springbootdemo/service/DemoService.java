@@ -92,8 +92,16 @@ public class DemoService {
         log.info("开始访问 flaskapp 服务");
         log.info("开始访问flaskapp 服务");
         // 访问 flaskapp/env/version 接口
-        String result = restTemplate.getForObject("http://flaskapp.default.svc/fetch_with_header?url=" + url, String.class);
+        String result = restTemplate
+                .getForObject("http://flaskapp.default.svc/fetch_with_header?url=" + url, String.class);
         log.info("访问 flaskapp 服务成功, 返回:{}", result);
         return true;
+    }
+
+    @Traced
+    public String accessBaidu() {
+        String result = restTemplate.getForObject("https://baidu/", String.class);
+        log.info(result);
+        return result;
     }
 }

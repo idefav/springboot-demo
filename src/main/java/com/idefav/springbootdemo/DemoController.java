@@ -36,4 +36,9 @@ public class DemoController {
         return result;
     }
 
+    @GetMapping("/baidu")
+    public String accessBaidu() {
+        return demoService.accessBaidu();
+    }
+
 }
