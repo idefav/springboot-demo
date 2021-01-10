@@ -1,6 +1,6 @@
 package com.idefav.springbootdemo.properties;
 
-import com.idefav.springbootdemo.RandomLoadBancor;
+import com.idefav.springbootdemo.loadbalancers.RandomLoadBancor;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

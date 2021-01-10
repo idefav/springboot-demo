@@ -104,4 +104,10 @@ public class DemoService {
         log.info(result);
         return result;
     }
+
+    public String accessUrl(String url) {
+        String result = restTemplate.getForObject(url, String.class);
+        log.info(result);
+        return result;
+    }
 }

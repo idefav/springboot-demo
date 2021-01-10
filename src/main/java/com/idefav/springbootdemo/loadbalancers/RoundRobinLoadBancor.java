@@ -1,9 +1,8 @@
-package com.idefav.springbootdemo;
+package com.idefav.springbootdemo.loadbalancers;
 
 import org.apache.commons.collections4.CollectionUtils;
 
 import java.util.List;
-import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**

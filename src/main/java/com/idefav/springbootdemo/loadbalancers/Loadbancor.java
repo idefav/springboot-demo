@@ -1,4 +1,4 @@
-package com.idefav.springbootdemo;
+package com.idefav.springbootdemo.loadbalancers;
 
 /**
  * the Loadbancor description.

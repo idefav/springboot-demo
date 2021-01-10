@@ -1,11 +1,9 @@
 package com.idefav.springbootdemo.interceptor;
 
-import com.idefav.springbootdemo.Loadbancor;
-import com.idefav.springbootdemo.RandomLoadBancor;
-import com.idefav.springbootdemo.properties.ServerListProperty;
+import com.idefav.springbootdemo.loadbalancers.Loadbancor;
+import com.idefav.springbootdemo.loadbalancers.RandomLoadBancor;
 import com.idefav.springbootdemo.properties.ServiceConfig;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.http.HttpRequest;
 import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
@@ -16,7 +14,6 @@ import rawhttp.core.RawHttp;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
 import java.net.URI;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
